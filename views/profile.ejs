@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= user.name %> - Profil</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <nav>
+        <a href="/">Accueil</a>
+        <a href="/profile">Profil</a>
+        <a href="/tasks">Tâches</a>
+        <a href="/about">À propos</a>
+        <a href="/contact">Contact</a>
+    </nav>
+    
+    <main>
+        <div class="profile-container">
+            <h1>Profil Utilisateur</h1>
+            
+            <div class="profile-card">
+                <div class="profile-header">
+                    <h2><%= user.name %></h2>
+                </div>
+                
+                <div class="profile-info">
+                    <div class="info-item">
+                        <span class="label">Âge :</span>
+                        <span class="value"><%= user.age %> ans</span>
+                    </div>
+                    
+                    <div class="info-item">
+                        <span class="label">Profession :</span>
+                        <span class="value"><%= user.occupation %></span>
+                    </div>
+                </div>
+                
+                <div class="hobbies-section">
+                    <h3>Loisirs :</h3>
+                    <ul class="hobbies-list">
+                        <% user.hobbies.forEach(hobby => { %>
+                            <li class="hobby-item">
+                                <span class="hobby-icon">🎯</span>
+                                <%= hobby %>
+                            </li>
+                        <% }); %>
+                    </ul>
+                </div>
+                
+                <div class="profile-stats">
+                    <div class="stat">
+                        <span class="stat-number"><%= user.hobbies.length %></span>
+                        <span class="stat-label">Loisirs</span>
+                    </div>
+                </div>
+            </div>
+            
+            <a href="/" class="btn">Retour à l'accueil</a>
+        </div>
+    </main>
+</body>
+</html>

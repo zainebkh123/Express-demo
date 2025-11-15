@@ -7,6 +7,16 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 app.set('view engine', 'ejs');
 
+app.get('/profile', (req, res) => {
+  const user = {
+    name: 'Zaineb KH',
+    age: 21,
+    occupation: 'Software Engineer',
+    hobbies: ['Coding', 'Gaming', 'Reading']
+  };
+  res.render('profile', { user });
+});
+
 let tasks = [
   { id: 1, title: 'Apprendre Express', done: false },
   { id: 2, title: 'Créer une application de démonstration', done: false },

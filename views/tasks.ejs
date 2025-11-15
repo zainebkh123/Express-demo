@@ -9,6 +9,7 @@
 <body>
     <nav>
         <a href="/">Accueil</a>
+        <a href="/profile">Profil</a>
         <a href="/tasks">Tâches</a>
         <a href="/about">À propos</a>
         <a href="/contact">Contact</a>
@@ -17,14 +18,11 @@
     <main>
         <h1>Mes Tâches</h1>
         <p class="task-count">Total : <%= totalTasks %> tâche(s)</p>
-        
-        <!-- Formulaire d'ajout de tâche -->
         <form id="taskForm" class="task-form">
             <input type="text" id="taskTitle" name="title" placeholder="Nouvelle tâche..." required>
             <button type="submit">Ajouter</button>
         </form>
         
-        <!-- Liste des tâches -->
         <ul class="task-list">
             <% tasks.forEach(task => { %>
                 <li class="task-item <%= task.done ? 'done' : '' %>">
@@ -44,7 +42,6 @@
     </main>
     
     <script>
-        // Gestion du formulaire avec AJAX
         document.getElementById('taskForm').addEventListener('submit', async (e) => {
             e.preventDefault();
             
@@ -66,7 +63,6 @@
                 });
                 
                 if (response.ok) {
-                    // Recharger la page pour afficher la nouvelle tâche
                     window.location.reload();
                 } else {
                     const error = await response.json();
