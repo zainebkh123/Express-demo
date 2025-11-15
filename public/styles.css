@@ -1,0 +1,151 @@
+/* Reset et styles de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Navigation */
+nav {
+    background: #2c3e50;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #34495e;
+}
+
+/* Contenu principal */
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Titres */
+h1 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+}
+
+/* Boutons */
+.btn {
+    display: inline-block;
+    background: #3498db;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    margin-top: 1rem;
+}
+
+.btn:hover {
+    background: #2980b9;
+}
+
+/* Formulaire de tâches */
+.task-form {
+    margin: 2rem 0;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.task-form input {
+    flex: 1;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.task-form button {
+    background: #27ae60;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.task-form button:hover {
+    background: #219a52;
+}
+
+/* Liste des tâches */
+.task-count {
+    color: #7f8c8d;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.task-list {
+    list-style: none;
+    margin: 1rem 0;
+}
+
+.task-item {
+    background: #ecf0f1;
+    margin: 0.5rem 0;
+    padding: 1rem;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 4px solid #3498db;
+}
+
+.task-item.done {
+    border-left-color: #27ae60;
+    opacity: 0.7;
+}
+
+.task-title {
+    font-weight: 500;
+}
+
+.task-status {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+/* Page Contact */
+.email {
+    font-size: 1.2rem;
+    color: #3498db;
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+/* Page About */
+ul {
+    margin: 1rem 0;
+    padding-left: 2rem;
+}
+
+li {
+    margin: 0.5rem 0;
+}
